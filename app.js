@@ -20,6 +20,9 @@ const { sanitize } = require('express-mongo-sanitize');
 
 const app = express();
 
+// Trusting proxies
+app.enable('trust proxy');
+
 // Setting up the template engine -> pug
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
