@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const compression = require('compression');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -16,9 +17,15 @@ const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
-const { sanitize } = require('express-mongo-sanitize');
+// const { sanitize } = require('express-mongo-sanitize');
 
 const app = express();
+
+// Implement CORS
+app.use(cors());
+
+// Respond to options request
+app.options('*', cors());
 
 // Trusting proxies
 app.enable('trust proxy');
