@@ -54,7 +54,7 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
-// We need the body not in JSON for the checkout session
+// We need the body but not in JSON for the checkout session
 app.post(
   '/webhook-checkout',
   express.raw({ type: 'application/json' }),

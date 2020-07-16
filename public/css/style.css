@@ -43,6 +43,12 @@ body {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 62.5em) {
+  body {
+    padding: 0;
+  }
+}
+
 .main {
   background-color: #f7f7f7;
   padding: 8rem 6rem;
@@ -51,6 +57,12 @@ body {
   flex: 1;
   position: relative;
 }
+
+/* @media only screen and (max-width: 75em) {
+  .main {
+    padding: 8rem 4rem;
+  }
+} */
 
 .flex {
   display: -webkit-box;
@@ -320,6 +332,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 2rem 0;
   }
 }
 .header__logo img {
@@ -863,6 +876,14 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
+
+@media only screen and (max-width: 62.5em) {
+  .nav {
+    background-color: #444;
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .nav {
     -webkit-box-orient: vertical;
@@ -878,7 +899,7 @@ body {
 }
 @media only screen and (max-width: 62.5em) {
   .nav--tours {
-    margin-bottom: 1.5rem;
+    padding: 1rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -894,6 +915,15 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
+
+@media only screen and (max-width: 62.5em) {
+  .nav--user {
+    margin-top: -0.5rem;
+    padding: 1rem;
+    justify-content: start;
+  }
+}
+
 .nav__el,
 .nav__el:link,
 .nav__el:visited {
@@ -915,6 +945,7 @@ body {
   cursor: pointer;
   font-family: inherit;
 }
+
 .nav__el:hover,
 .nav__el:active {
   -webkit-transform: translateY(-2px);
@@ -924,6 +955,13 @@ body {
 .nav__el:not(:last-child) {
   margin-right: 3rem;
 }
+
+@media only screen and (max-width: 62.5em) {
+  .nav__el:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
 @media only screen and (max-width: 37.5em) {
   .nav__el:not(:last-child) {
     margin-right: 0;
@@ -946,6 +984,20 @@ body {
   text-shadow: none;
   border-color: #f7f7f7;
 }
+
+@media only screen and (max-width: 56.25em) {
+  .nav-container {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+  }
+}
+
+.nav-box {
+  font-size: 3rem;
+  color: white;
+}
+
 .nav__search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1072,10 +1124,17 @@ body {
 
 .card-container {
   max-width: 120rem;
+  /* width: max-content; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 7rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .card {
