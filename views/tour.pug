@@ -23,7 +23,7 @@ block content
             img.header__hero-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
 
         .heading-box
-            h1.heading-primary
+            h1.heading-primary.header__heading
                 span= `${tour.name} tour`
             .heading-box__group
                 .heading-box__detail
@@ -87,7 +87,7 @@ block content
             img.cta__img.cta__img--1(src=`/img/tours/${tour.images[1]}`, alt='Tour picture')
             img.cta__img.cta__img--2(src=`/img/tours/${tour.images[2]}`, alt='Tour picture')
             .cta__content
-            h2.heading-secondary What are you waiting for?
+            h2.heading-secondary.cta__heading What are you waiting for?
             p.cta__text= `${tour.duration} days. 1 adventure. Infinite memories. Make it yours today!`
 
             if user

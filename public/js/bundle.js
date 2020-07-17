@@ -8991,7 +8991,9 @@ var signupForm = document.querySelector('.form--signup');
 var logoutBtn = document.querySelector('.nav__el--logout');
 var userDataForm = document.querySelector('.form-user-data');
 var userPasswordForm = document.querySelector('.form-user-password');
-var bookBtn = document.getElementById('book-tour'); // Delegation
+var bookBtn = document.getElementById('book-tour');
+var navigation = document.querySelector('.nav-navigation');
+var navIcon = document.querySelector('.nav-box'); // Delegation
 
 if (mapBox) {
   var locations = JSON.parse(mapBox.dataset.locations);
@@ -9074,6 +9076,12 @@ if (userPasswordForm) {
   }());
 }
 
+if (navIcon) {
+  navIcon.addEventListener('click', function () {
+    navigation.classList.toggle('nav-navigation__visible');
+  });
+}
+
 if (bookBtn) {
   bookBtn.addEventListener('click', /*#__PURE__*/function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(e) {
@@ -9131,7 +9139,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50844" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65031" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

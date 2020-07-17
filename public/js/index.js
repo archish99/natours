@@ -14,6 +14,8 @@ const logoutBtn = document.querySelector('.nav__el--logout');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 const bookBtn = document.getElementById('book-tour');
+const navigation = document.querySelector('.nav-navigation');
+const navIcon = document.querySelector('.nav-box');
 
 // Delegation
 if (mapBox) {
@@ -75,6 +77,12 @@ if (userPasswordForm) {
     document.getElementById('password-current').value = '';
     document.getElementById('password').value = '';
     document.getElementById('password-confirm').value = '';
+  });
+}
+
+if (navIcon) {
+  navIcon.addEventListener('click', () => {
+    navigation.classList.toggle('nav-navigation__visible');
   });
 }
 
